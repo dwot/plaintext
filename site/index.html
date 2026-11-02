@@ -17,7 +17,7 @@ main { max-width: 1008px; margin: 0 auto; padding: 64px 24px 40px; }
 h1 { font-size: clamp(34px, 7vw, 52px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 20px; }
 .lead { font-size: 20px; color: var(--muted); margin: 0 0 56px; max-width: 34em; }
 h2 { font-size: 15px; font-weight: 600; color: var(--muted); margin: 56px 0 16px; }
-.courses { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .course {
   display: flex; flex-direction: column; padding: 24px; background: var(--surface);
   border: 1px solid var(--border); border-radius: 10px; color: inherit; text-decoration: none;
@@ -32,10 +32,12 @@ h2 { font-size: 15px; font-weight: 600; color: var(--muted); margin: 56px 0 16px
 .points span { color: var(--muted); font-size: 16px; }
 code { font-family: var(--mono); font-size: 0.9em; background: var(--code-bg); padding: 0.1em 0.35em; border-radius: 4px; }
 footer { max-width: 1008px; margin: 0 auto; padding: 24px 24px 56px; }
+@media (max-width: 860px) {
+  .courses { grid-template-columns: 1fr; }
+}
 @media (max-width: 620px) {
   main { padding: 48px 16px 24px; }
   footer { padding: 24px 16px 40px; }
-  .courses { grid-template-columns: 1fr; }
   .lead { font-size: 18px; margin-bottom: 40px; }
 }
 </style>
@@ -56,6 +58,12 @@ footer { max-width: 1008px; margin: 0 auto; padding: 24px 24px 56px; }
       <p>Learn GitHub Flavored Markdown by matching what you see, from your first paragraph to a full README. 40 levels.</p>
       <span class="go">Start Backtick →</span>
     </a>
+    <a class="course" href="https://caret.plaintext.guru">
+      <div class="glyph" aria-hidden="true">^</div>
+      <h3>Caret</h3>
+      <p>Learn regular expressions with text that lights up as you type, from a plain word to rewriting messy data. 24 levels.</p>
+      <span class="go">Start Caret →</span>
+    </a>
     <a class="course" href="https://tilde.plaintext.guru">
       <div class="glyph" aria-hidden="true">~</div>
       <h3>Tilde</h3>
@@ -72,7 +80,7 @@ footer { max-width: 1008px; margin: 0 auto; padding: 24px 24px 56px; }
   </ul>
 </main>
 <footer>
-  <p class="legal">Source on GitHub: <a href="https://github.com/dwot/backtick">Backtick</a> · <a href="https://github.com/dwot/tilde">Tilde</a> · <a href="https://github.com/dwot/plaintext">this site</a> · Visits are counted with Cloudflare Web Analytics</p>
+  <p class="legal">Source on GitHub: <a href="https://github.com/dwot/backtick">Backtick</a> · <a href="https://github.com/dwot/caret">Caret</a> · <a href="https://github.com/dwot/tilde">Tilde</a> · <a href="https://github.com/dwot/plaintext">this site</a> · Visits are counted with Cloudflare Web Analytics</p>
 </footer>
 </body>
 </html>
